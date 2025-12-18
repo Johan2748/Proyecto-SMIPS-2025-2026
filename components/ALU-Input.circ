@@ -16,7 +16,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
       <a name="text" val=""/>
-      <a name="font" val="SansSerif plain 44"/>
+      <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
     </tool>
@@ -37,7 +37,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool lib="6" name="Edit Tool"/>
     <tool lib="6" name="Text Tool">
       <a name="text" val=""/>
-      <a name="font" val="SansSerif plain 44"/>
+      <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
     </tool>
@@ -79,8 +79,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-anchor facing="east" height="6" width="6" x="317" y="137"/>
     </appear>
     <wire from="(160,310)" to="(190,310)"/>
-    <wire from="(660,360)" to="(660,370)"/>
-    <wire from="(590,320)" to="(590,360)"/>
     <wire from="(610,300)" to="(630,300)"/>
     <wire from="(280,460)" to="(300,460)"/>
     <wire from="(220,410)" to="(220,420)"/>
@@ -88,36 +86,21 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(140,460)" to="(160,460)"/>
     <wire from="(890,280)" to="(920,280)"/>
     <wire from="(540,290)" to="(580,290)"/>
-    <wire from="(590,360)" to="(660,360)"/>
+    <wire from="(590,320)" to="(590,350)"/>
     <wire from="(860,200)" to="(1000,200)"/>
     <wire from="(70,200)" to="(170,200)"/>
     <wire from="(510,310)" to="(580,310)"/>
     <wire from="(90,410)" to="(220,410)"/>
-    <comp lib="0" loc="(90,550)" name="Pin">
-      <a name="tristate" val="false"/>
+    <comp lib="6" loc="(119,191)" name="Text">
+      <a name="text" val="Input"/>
+      <a name="font" val="SansSerif plain 44"/>
     </comp>
-    <comp lib="0" loc="(540,290)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="32"/>
-      <a name="label" val="[RT]"/>
+    <comp lib="6" loc="(958,234)" name="Text">
+      <a name="text" val="ALU-Input"/>
     </comp>
     <comp lib="0" loc="(190,310)" name="Tunnel">
       <a name="width" val="32"/>
       <a name="label" val="[RT]"/>
-    </comp>
-    <comp lib="0" loc="(140,460)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(90,410)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="6" loc="(100,434)" name="Text">
-      <a name="text" val="constant"/>
-    </comp>
-    <comp lib="0" loc="(660,370)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="Type I"/>
     </comp>
     <comp lib="6" loc="(149,399)" name="Text">
       <a name="text" val="extender selector"/>
@@ -125,21 +108,41 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="6" loc="(110,529)" name="Text">
       <a name="text" val="Is Inmediate"/>
     </comp>
+    <comp lib="0" loc="(630,300)" name="Tunnel">
+      <a name="width" val="32"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(540,290)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="32"/>
+      <a name="label" val="[RT]"/>
+    </comp>
     <comp lib="0" loc="(890,280)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="32"/>
       <a name="label" val="B"/>
     </comp>
+    <comp lib="0" loc="(110,550)" name="Tunnel">
+      <a name="label" val="Type I"/>
+    </comp>
+    <comp lib="6" loc="(100,434)" name="Text">
+      <a name="text" val="constant"/>
+    </comp>
+    <comp lib="6" loc="(119,259)" name="Text">
+      <a name="text" val="[RT]"/>
+    </comp>
     <comp lib="0" loc="(300,460)" name="Tunnel">
       <a name="width" val="32"/>
       <a name="label" val="const"/>
     </comp>
-    <comp lib="0" loc="(110,550)" name="Tunnel">
-      <a name="label" val="Type I"/>
-    </comp>
-    <comp lib="0" loc="(630,300)" name="Tunnel">
+    <comp lib="2" loc="(610,300)" name="Multiplexer">
       <a name="width" val="32"/>
-      <a name="label" val="B"/>
+      <a name="disabled" val="0"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="6" loc="(927,189)" name="Text">
+      <a name="text" val="Output"/>
+      <a name="font" val="SansSerif plain 44"/>
     </comp>
     <comp lib="6" loc="(535,101)" name="Text">
       <a name="text" val="ALU-Input"/>
@@ -152,35 +155,30 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp loc="(280,460)" name="Constant Extender"/>
+    <comp lib="0" loc="(90,550)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(590,350)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="Type I"/>
+    </comp>
+    <comp lib="0" loc="(140,460)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+    </comp>
     <comp lib="0" loc="(160,310)" name="Pin">
       <a name="width" val="32"/>
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="6" loc="(119,191)" name="Text">
-      <a name="text" val="Input"/>
-      <a name="font" val="SansSerif plain 44"/>
     </comp>
     <comp lib="0" loc="(510,310)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="32"/>
       <a name="label" val="const"/>
     </comp>
-    <comp lib="2" loc="(610,300)" name="Multiplexer">
-      <a name="width" val="32"/>
-      <a name="disabled" val="0"/>
-      <a name="enable" val="false"/>
+    <comp lib="0" loc="(90,410)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
-    <comp lib="6" loc="(958,234)" name="Text">
-      <a name="text" val="ALU-Input"/>
-    </comp>
-    <comp lib="6" loc="(119,259)" name="Text">
-      <a name="text" val="[RT]"/>
-    </comp>
-    <comp lib="6" loc="(927,189)" name="Text">
-      <a name="text" val="Output"/>
-      <a name="font" val="SansSerif plain 44"/>
-    </comp>
+    <comp loc="(280,460)" name="Constant Extender"/>
   </circuit>
   <circuit name="Constant Extender">
     <a name="circuit" val="Constant Extender"/>
@@ -198,6 +196,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </appear>
     <wire from="(140,380)" to="(170,380)"/>
     <wire from="(580,290)" to="(600,290)"/>
+    <wire from="(490,310)" to="(520,310)"/>
     <wire from="(620,360)" to="(670,360)"/>
     <wire from="(200,280)" to="(200,290)"/>
     <wire from="(200,260)" to="(250,260)"/>
@@ -208,62 +207,43 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(600,290)" to="(600,340)"/>
     <wire from="(80,220)" to="(180,220)"/>
     <wire from="(510,360)" to="(580,360)"/>
-    <wire from="(490,310)" to="(530,310)"/>
     <wire from="(490,270)" to="(530,270)"/>
+    <comp lib="6" loc="(117,265)" name="Text">
+      <a name="text" val="Constant"/>
+    </comp>
+    <comp lib="0" loc="(170,380)" name="Tunnel">
+      <a name="label" val="select"/>
+    </comp>
     <comp lib="6" loc="(132,212)" name="Text">
       <a name="text" val="Input"/>
       <a name="font" val="SansSerif plain 44"/>
+    </comp>
+    <comp lib="0" loc="(250,260)" name="Tunnel">
+      <a name="label" val="I15"/>
+    </comp>
+    <comp lib="0" loc="(220,290)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="constant"/>
+    </comp>
+    <comp lib="0" loc="(490,270)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="I15"/>
+    </comp>
+    <comp lib="1" loc="(580,290)" name="AND Gate">
+      <a name="inputs" val="2"/>
+      <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="0" loc="(140,380)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(620,360)" name="Bit Extender">
       <a name="in_width" val="16"/>
       <a name="out_width" val="32"/>
       <a name="type" val="input"/>
     </comp>
-    <comp lib="0" loc="(1110,290)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="6" loc="(1071,211)" name="Text">
-      <a name="text" val="Output"/>
-      <a name="font" val="SansSerif plain 44"/>
-    </comp>
-    <comp lib="0" loc="(220,290)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="constant"/>
-    </comp>
-    <comp lib="1" loc="(580,290)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(490,270)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="I15"/>
-    </comp>
-    <comp lib="6" loc="(88,382)" name="Text">
-      <a name="text" val="slti"/>
-    </comp>
     <comp lib="6" loc="(594,158)" name="Text">
       <a name="text" val="Constant"/>
       <a name="font" val="SansSerif plain 96"/>
-    </comp>
-    <comp lib="0" loc="(510,360)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="constant"/>
-    </comp>
-    <comp lib="6" loc="(87,395)" name="Text">
-      <a name="text" val="sltiu"/>
-    </comp>
-    <comp lib="0" loc="(1080,290)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="32"/>
-      <a name="label" val="extended constant"/>
-    </comp>
-    <comp lib="0" loc="(160,290)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(200,280)" name="Splitter">
       <a name="facing" val="north"/>
@@ -287,28 +267,41 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit14" val="none"/>
       <a name="bit15" val="0"/>
     </comp>
-    <comp lib="0" loc="(170,380)" name="Tunnel">
-      <a name="label" val="select"/>
-    </comp>
-    <comp lib="0" loc="(140,380)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(670,360)" name="Tunnel">
+    <comp lib="0" loc="(1080,290)" name="Tunnel">
+      <a name="facing" val="east"/>
       <a name="width" val="32"/>
       <a name="label" val="extended constant"/>
     </comp>
-    <comp lib="0" loc="(250,260)" name="Tunnel">
-      <a name="label" val="I15"/>
+    <comp lib="0" loc="(510,360)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="constant"/>
+    </comp>
+    <comp lib="0" loc="(1110,290)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(490,310)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="select"/>
     </comp>
-    <comp lib="6" loc="(86,369)" name="Text">
-      <a name="text" val="addi"/>
+    <comp lib="0" loc="(670,360)" name="Tunnel">
+      <a name="width" val="32"/>
+      <a name="label" val="extended constant"/>
     </comp>
-    <comp lib="6" loc="(117,265)" name="Text">
-      <a name="text" val="Constant"/>
+    <comp lib="6" loc="(1071,211)" name="Text">
+      <a name="text" val="Output"/>
+      <a name="font" val="SansSerif plain 44"/>
+    </comp>
+    <comp lib="6" loc="(83,382)" name="Text">
+      <a name="text" val="andi,ori,xori"/>
+    </comp>
+    <comp lib="0" loc="(160,290)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
     </comp>
   </circuit>
 </project>
